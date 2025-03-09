@@ -1,0 +1,2 @@
+C:/Users/vezza/Desktop/FlutterApp/black_ops_6_zombie_tools/android/app/.cxx/RelWithDebInfo/y663pr3f/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/vezza/Desktop/FlutterApp/black_ops_6_zombie_tools/android/app/.cxx/RelWithDebInfo/y663pr3f/armeabi-v7a/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,70 @@
+{
+  "runePuzzle": "Rune Puzzle",
+  "@runePuzzle": {
+    "description": "The title for rune puzzle tool"
+  },
+  "balmung": "Balmung (Void Sword)",
+  "@balmung": {
+    "description": "The title for dri11 tool"
+  },
+  "thecode": "The code is",
+  "@thecode": {
+    "description": "The title for code in dri11 tool"
+  },
+  "menu": "Menu",
+  "@menu": {
+    "description": "The title for drawer"
+  },
+  "tools": "Tools",
+  "@tools": {
+    "description": "The opzion tools in drawer"
+  },
+  "about": "About",
+  "@about": {
+    "description": "The opzion about in drawer"
+  },
+  "showGuides": "Show Guides",
+  "@showGuides": {
+    "description": "The option show guides"
+  },
+  "italianLanguage": "Italian",
+  "@italianLanguage": {
+    "description": "The option italian language"
+  },
+  "englishLanguage": "English",
+  "@englishLanguage": {
+    "description": "The option english language"
+  },
+  "darkTheme": "Dark Theme",
+  "@darkTheme": {
+    "description": "The option dark theme"
+  },
+  "lightTheme": "Light Theme",
+  "@lightTheme": {
+    "description": "The option light theme"
+  },
+  "systemTheme": "System Theme",
+  "@systemTheme": {
+    "description": "The option system theme "
+  },
+  "toolsPages": "Tools Pages",
+  "@toolsPages": {
+    "description": "the title for settings tools page"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "The title for setting language"
+  },
+  "theme": "Theme",
+  "@theme": {
+    "description": "The title for setting theme"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "The settings title and opzion settings in drawer"
+  },
+  "appTitle": "Call of Duty Black Ops 6 Tools",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}

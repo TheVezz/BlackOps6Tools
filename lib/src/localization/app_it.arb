@@ -1,0 +1,70 @@
+{
+  "runePuzzle": "Puzzle Runico",
+  "@runePuzzle": {
+    "description": "The title for rune puzzle tool"
+  },
+  "balmung": "Balmung (Spada del vuoto)",
+  "@balmung": {
+    "description": "Il titolo per lo strumento void sword"
+  },
+  "thecode": "Il codice è",
+  "@thecode": {
+    "description": "Il titolo per il codice nello strumento dri11"
+  },
+  "menu": "Menu",
+  "@menu": {
+    "description": "Il titolo del drawer"
+  },
+  "tools": "Strumenti",
+  "@tools": {
+    "description": "L'opzione strumenti nel drawer"
+  },
+  "about": "Informazioni",
+  "@about": {
+    "description": "L'opzione informazioni nel drawer"
+  },
+  "showGuides": "Mostra Guide",
+  "@showGuides": {
+    "description": "L'opzione mostra guide"
+  },
+  "italianLanguage": "Italiano",
+  "@italianLanguage": {
+    "description": "L'opzione per la lingua italiana"
+  },
+  "englishLanguage": "Inglese",
+  "@englishLanguage": {
+    "description": "L'opzione per la lingua inglese"
+  },
+  "darkTheme": "Tema Scuro",
+  "@darkTheme": {
+    "description": "L'opzione per il tema scuro"
+  },
+  "lightTheme": "Tema Chiaro",
+  "@lightTheme": {
+    "description": "L'opzione per il tema chiaro"
+  },
+  "systemTheme": "Tema di Sistema",
+  "@systemTheme": {
+    "description": "L'opzione per il tema di sistema"
+  },
+  "toolsPages": "Pagine Strumenti",
+  "@toolsPages": {
+    "description": "Il titolo impostazii delle pagine strumenti"
+  },
+  "language": "Lingua",
+  "@language": {
+    "description": "Il titolo per impostare la lingua"
+  },
+  "theme": "Tema",
+  "@theme": {
+    "description": "Il titolo per impostare il tema"
+  },
+  "settings": "Impostazioni",
+  "@settings": {
+    "description": "Il titolo delle impostazioni e l'opzione nel drawer"
+  },
+  "appTitle": "Call Of Duty Black Ops 6 Strumenti",
+  "@appTitle": {
+    "description": "Il titolo dell'applicazione"
+  }
+}
