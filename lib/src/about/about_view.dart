@@ -10,7 +10,7 @@ class AboutView extends StatelessWidget {
 
   // Link ai vari siti
   final String nexusModsUrl = "https://next.nexusmods.com/profile/TheVezz98";
-  final String githubUrl = "https://github.com/TheVezz/black_ops_6_tools";
+  final String githubUrl = "https://github.com/TheVezz/BlackOps6Tools/tree/main";
   final String playStoreUrl = "";
 
   /// Funzione per aprire un URL nel browser
