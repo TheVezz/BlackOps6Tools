@@ -11,6 +11,10 @@
   "@aboutNexusMods": {
     "description": "The title for download link on nexusmods in about page"
   },
+  "aboutDescription3": "Author Thevezz but some of the assets used are by Wesley from hub.tcno.co",
+  "@aboutDescription3": {
+    "description": "The third description on the Information page"
+  },
   "aboutDescription2": "You can find this app on Nexus Mods, Google Play Store and the source code on Github.",
   "@aboutDescription2": {
     "description": "The second description in about page"
