@@ -83,6 +83,11 @@ class AboutView extends StatelessWidget {
             onTap: () => _launchUrl(githubUrl),
           ),
           const Divider(),
+          const SizedBox(height: 16),
+          Text(
+            AppLocalizations.of(context)!.aboutDescription3,
+            style: Theme.of(context).textTheme.bodyLarge,
+          ),
         ],
       ),
     );
