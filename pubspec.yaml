@@ -41,14 +41,5 @@ flutter:
     - assets/images/maps/citadelle_des_morts/void_sword/
     - assets/images/maps/citadelle_des_morts/rune_puzzle/
 
-flutter_launcher_icons:
-  android: true
-  ios: true
-  image_path: "assets/icon/icon.png"
-  windows:
-    generate: true
-    image_path: "path/to/image.png"
-    icon_size: 48 # min:48, max:256, default: 48
-
 launcher_name:
   default: "Black Ops 6 Tools"
