@@ -1,29 +1,20 @@
-# black_ops_6_zombie_tools
+# Black Ops 6 Zombie Tools
 
-A new Flutter project.
+Black Ops 6 Zombie Tools è un'app Flutter dedicata ad alcuni enigmi per Call of Duty Black Ops 6 zombie.
 
-## Getting Started
+## Caratteristiche
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/to/state-management-sample).
+- **Tools** for **DRI-11** on Terminus map, **Rune Puzzle** e **Balmung** on Citadelle Des Morts map.
+- **Localizzazione integrata:** L'app supporta la traduzione in inglese e italiano.
+- **Interfaccia moderna e intuitiva:** Progettata per offrire una user experience fluida e coinvolgente.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
-## Assets
+# Black Ops 6 Zombie Tools
 
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
+Black Ops 6 Zombie Tools is a Flutter app dedicated to some puzzles for Call of Duty Black Ops 6 zombie.
 
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/to/resolution-aware-images).
+## Features
 
-## Localization
-
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
-
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter apps](https://flutter.dev/to/internationalization).
+- **Tools** for **DRI-11** on the Terminus map, **Rune Puzzle** and **Balmung** on the Citadelle Des Morts map.
+- **Built-in Localization:** The app supports translation in English and Italian.
+- **Modern and Intuitive Interface:** Designed to provide a smooth and engaging user experience.
