@@ -21,7 +21,6 @@ class Dri11View extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Main Title
                 Text(
                   'DRI-11 Beamsmasher',
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -30,7 +29,6 @@ class Dri11View extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 24),
-                // Tool per la selezione dei simboli
                 Dri11Tool(),
                 const SizedBox(height: 24),
               ],

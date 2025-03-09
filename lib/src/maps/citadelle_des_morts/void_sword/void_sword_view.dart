@@ -3,9 +3,7 @@ import '../../../core/logger.dart';
 import 'void_sword_tool.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-/// Displays detailed instructions for obtaining the Balmung (Void Sword).
 class VoidSwordView extends StatelessWidget {
-
   const VoidSwordView({super.key});
 
   @override
@@ -23,7 +21,6 @@ class VoidSwordView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Main Title
                 Text(
                   AppLocalizations.of(context)!.balmung,
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -32,8 +29,6 @@ class VoidSwordView extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 24),
-                
-                // Tool per la selezione dei simboli (centrato)
                 VoidSwordTool(),
               ],
             ),

@@ -3,7 +3,6 @@ import '../../../core/logger.dart';
 import 'rune_puzzle_tool.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-/// Visualizza la vista per RunePuzzleView.
 class RunePuzzleView extends StatelessWidget {
   const RunePuzzleView({super.key});
 

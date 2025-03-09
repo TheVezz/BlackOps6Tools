@@ -24,7 +24,7 @@ WidgetBuilder? getRoute(
     '/': (context) => const ToolsView(),
     '/settings': (context) {
       logger.info('Navigating to SettingsView');
-      return SettingsView(controller: settingsController); // Pass the controller
+      return SettingsView(controller: settingsController);
     },
     '/about': (context) => const AboutView(),
 

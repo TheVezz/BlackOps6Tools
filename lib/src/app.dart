@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    logger.info('Building MyApp widget'); // Log when MyApp is built
+    logger.info('Building MyApp widget');
 
     return AnimatedBuilder(
       animation: settingsController,
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           onGenerateTitle: (BuildContext context) =>
               AppLocalizations.of(context)!.appTitle,
           theme: ThemeData(), // Default theme
-          darkTheme: ThemeData.dark(), // Dark theme
+          darkTheme: ThemeData.dark(),
           themeMode: settingsController.themeMode, // Dynamic theme mode
           initialRoute: '/', // Initial route
           onGenerateRoute: (settings) {
@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
             if (routeBuilder != null) {
               return MaterialPageRoute(
                 builder: (context) => CustomScaffold(
-                  breadcrumb: generateBreadcrumb(context, settings.name), // Usa la funzione
+                  breadcrumb: generateBreadcrumb(context, settings.name),
                   body: routeBuilder(context),
                 ),
                 settings: settings,

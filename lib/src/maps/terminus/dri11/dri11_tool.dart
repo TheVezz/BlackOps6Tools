@@ -216,7 +216,6 @@ class _Dri11ToolState extends State<Dri11Tool> {
     );
   }
 
-  /// Calcola i risultati in base alle associazioni.
   String computeResults() {
     if (selectedMapping.length == 3) {
       int? X, Y, Z;

@@ -1,4 +1,24 @@
 {
+  "aboutGitHub": "Codice sorgente su GitHub",
+  "@aboutGitHub": {
+    "description": "Il titolo per il codice sorgente su GitHub nella pagina informazioni"
+  },
+  "aboutPlayStore": "Scarica su Google Play Store",
+  "@aboutPlayStore": {
+    "description": "Il titolo per il download link su Google Play Store nella pagina informazioni"
+  },
+  "aboutNexusMods": "Scarica su Nexus Mods",
+  "@aboutNexusMods": {
+    "description": "Il titolo per il link per il download su NexusMods nella pagina informazioni"
+  },
+  "aboutDescription2": "Puoi trovare questa app su Nexus Mods, Google Play Store e il codice sorgente su GitHub.",
+  "@aboutDescription2": {
+    "description": "La seconda descrizione nella pagina informazioni"
+  },
+  "aboutDescription1": "Questa app è open source con licenza MIT.",
+  "@aboutDescription1": {
+    "description": "La prima descrizione nella pagina informazioni"
+  },
   "runePuzzle": "Puzzle Runico",
   "@runePuzzle": {
     "description": "The title for rune puzzle tool"

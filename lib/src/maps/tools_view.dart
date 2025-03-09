@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/logger.dart'; // Import logger for debugging
+import '../core/logger.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// Displays a grid of maps for Black Ops 6.
@@ -17,16 +17,19 @@ class ToolsView extends StatelessWidget {
         'title': 'DRI-11 Beamsmasher',
         'route': '/maps/terminus/dri11',
         'image': 'assets/images/maps/terminus/dri11/dri11.webp',
+        //'map': 'Terminus',
       },
       {
         'title': AppLocalizations.of(context)!.runePuzzle,
         'route': '/maps/citadelle_des_morts/rune_puzzle',
         'image': 'assets/images/maps/citadelle_des_morts/rune_puzzle/rune_puzzle.webp',
+        //'map': 'Citadelle Des Morts',
       },
       {
         'title': AppLocalizations.of(context)!.balmung,
         'route': '/maps/citadelle_des_morts/void_sword',
         'image': 'assets/images/maps/citadelle_des_morts/void_sword/void_svord_puzzle.webp',
+        //'map': 'Citadelle Des Morts',
       },
     ];
 
@@ -37,24 +40,24 @@ class ToolsView extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: Center(
         child: Wrap(
-          spacing: 16, // Spaziatura orizzontale tra gli elementi
-          runSpacing: 16, // Spaziatura verticale tra le righe
-          alignment: WrapAlignment.center, // Centrare gli elementi
+          spacing: 16,
+          runSpacing: 16,
+          alignment: WrapAlignment.center,
           children: tools.map((mapData) {
-            logger.fine('Rendering map card: ${mapData['title']}'); // Log map rendering
+            logger.fine('Rendering map card: ${mapData['title']}');
 
             return GestureDetector(
               onTap: () {
-                logger.info('Navigating to: ${mapData['route']}'); // Log navigation action
+                logger.info('Navigating to: ${mapData['route']}');
                 Navigator.pushNamed(context, mapData['route']!);
               },
               child: SizedBox(
-                width: 210, // Larghezza fissa per le card
+                width: 210,
                 child: Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15), // Angoli arrotondati
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  elevation: 4, // Ombra della card
+                  elevation: 4,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -71,12 +74,12 @@ class ToolsView extends StatelessWidget {
                       ),
                       ClipRRect(
                         borderRadius: const BorderRadius.vertical(
-                          top: Radius.circular(15), // Angoli arrotondati per l'immagine
+                          top: Radius.circular(15),
                         ),
                         child: Image.asset(
-                          mapData['image'] ?? placeholderImage, // Percorso dell'immagine
-                          fit: BoxFit.contain, // Adattamento dell'immagine
-                          height: 150, // Altezza fissa per uniformità
+                          mapData['image'] ?? placeholderImage,
+                          fit: BoxFit.contain,
+                          height: 150,
                         ),
                       ),
                       Padding(

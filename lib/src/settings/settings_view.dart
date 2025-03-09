@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart'; // Import per la localizzazione
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'settings_controller.dart';
-import '../core/logger.dart'; // Import per il logger
+import '../core/logger.dart';
 
-/// Una vista che consente all'utente di personalizzare le impostazioni dell'app.
+///A view that allows the user to customize the app settings.
 class SettingsView extends StatelessWidget {
   const SettingsView({super.key, required this.controller});
 
@@ -12,17 +12,17 @@ class SettingsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    logger.info('Rendering SettingsView'); // Log quando viene renderizzata la vista
+    logger.info('Rendering SettingsView');
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
-        // Sezione per selezionare il tema
+        //section to select the theme
         _buildSectionHeader(context, AppLocalizations.of(context)!.theme),
         const SizedBox(height: 8),
         _buildThemeSettings(context),
         const Divider(height: 32, thickness: 1),
         
-        // Sezione per selezionare la lingua
+        //section to select the language
         _buildSectionHeader(context, AppLocalizations.of(context)!.language),
         const SizedBox(height: 8),
         _buildLanguageSettings(context),
@@ -30,9 +30,9 @@ class SettingsView extends StatelessWidget {
     );
   }
 
-  /// Costruisce un'intestazione di sezione con un titolo specifico.
+  ///builds a section header with a specific title.
   Widget _buildSectionHeader(BuildContext context, String title) {
-    logger.fine('Building section header: $title'); // Log per la creazione dell'intestazione
+    logger.fine('Building section header: $title');
     return Text(
       title,
       style: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -41,7 +41,7 @@ class SettingsView extends StatelessWidget {
     );
   }
 
-  /// Costruisce le impostazioni per la selezione del tema.
+  ///builds the settings for the selection of the theme.
   Widget _buildThemeSettings(BuildContext context) {
     final themes = [
       {
@@ -85,7 +85,7 @@ class SettingsView extends StatelessWidget {
     );
   }
 
-  /// Costruisce le impostazioni per la selezione della lingua.
+  ///builds the settings for selection of the language.
   Widget _buildLanguageSettings(BuildContext context) {
     final languages = [
       {
@@ -113,7 +113,7 @@ class SettingsView extends StatelessWidget {
                 language['icon'] as String,
                 width: 24,
                 height: 24,
-                fit: BoxFit.contain, // Mantiene proporzioni senza distorsioni
+                fit: BoxFit.contain,
               ),
             ),
             title: Text(language['label'] as String),

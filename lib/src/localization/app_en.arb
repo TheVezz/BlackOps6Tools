@@ -1,4 +1,24 @@
 {
+  "aboutGitHub": "Source code on Github",
+  "@aboutGitHub": {
+    "description": "The title for source code on github in about page"
+  },
+  "aboutPlayStore": "Download on Google Play Store",
+  "@aboutPlayStore": {
+    "description": "The title for download link on google play store in about page"
+  },
+  "aboutNexusMods": "Download on Nexus Mods",
+  "@aboutNexusMods": {
+    "description": "The title for download link on nexusmods in about page"
+  },
+  "aboutDescription2": "You can find this app on Nexus Mods, Google Play Store and the source code on Github.",
+  "@aboutDescription2": {
+    "description": "The second description in about page"
+  },
+  "aboutDescription1": "This app is open source with MIT license.",
+  "@aboutDescription1": {
+    "description": "The first description in about page"
+  },
   "runePuzzle": "Rune Puzzle",
   "@runePuzzle": {
     "description": "The title for rune puzzle tool"

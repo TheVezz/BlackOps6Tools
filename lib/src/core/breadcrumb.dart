@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-/// Genera una lista di breadcrumb basati sul nome della rotta.
+///generates a list of Broadcrumbs based on the name of the route.
 ///
-/// [routeName] è il nome della rotta corrente.
-/// [context] è il contesto Flutter per accedere ai navigatori o ai temi.
+///[Routtename] is the name of the current route.
+///[Context] is the Flutter context to access navigators or themes.
 ///
-/// Restituisce una lista di mappe contenenti i titoli e le azioni dei breadcrumb.
+///returns a list of maps containing the titles and Broadcrumb actions.
 List<Map<String, dynamic>> generateBreadcrumb(BuildContext context, String? routeName) {
   if (routeName == null) {
     debugPrint('Breadcrumb routeName is null');
@@ -20,7 +20,6 @@ List<Map<String, dynamic>> generateBreadcrumb(BuildContext context, String? rout
   if (routeName == '/') {
     breadcrumb.add({'title': AppLocalizations.of(context)!.tools});
   } else if (routeName.startsWith('/maps')) {
-    // Aggiungi il breadcrumb della home: Tools
     breadcrumb.add({
       'title': AppLocalizations.of(context)!.tools,
       'onTap': () => Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false),

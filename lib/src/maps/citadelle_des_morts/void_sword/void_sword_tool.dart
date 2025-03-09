@@ -11,7 +11,7 @@ class VoidSwordTool extends StatefulWidget {
 
 class _VoidSwordToolState extends State<VoidSwordTool>
     with TickerProviderStateMixin {
-  // Notifier per gestire le rotazioni
+  //Notifier to manage rotations
   final ValueNotifier<double> outerRotationNotifier = ValueNotifier<double>(0.0);
   final ValueNotifier<double> innerRotationNotifier = ValueNotifier<double>(0.0);
 
@@ -33,7 +33,7 @@ class _VoidSwordToolState extends State<VoidSwordTool>
       vsync: this,
       duration: const Duration(milliseconds: 500),
     );
-    // Inizializziamo le animazioni con valori iniziali uguali ai notifier
+    //We initialize animations with initial values ​​equal to notifier
     _outerAnimation = Tween<double>(
       begin: outerRotationNotifier.value,
       end: outerRotationNotifier.value,
@@ -57,7 +57,7 @@ class _VoidSwordToolState extends State<VoidSwordTool>
     super.dispose();
   }
 
-  /// Avvia l'animazione e aggiorna i ValueNotifier.
+  ///Start the animation and update the valuanotifier.
   void _animateRotation(double newOuter, double newInner) {
     _outerAnimation = Tween<double>(
       begin: outerRotationNotifier.value,
@@ -72,7 +72,7 @@ class _VoidSwordToolState extends State<VoidSwordTool>
       CurvedAnimation(parent: _innerController, curve: Curves.easeInOut),
     );
 
-    // Aggiungiamo i listener per aggiornare i notifier
+    //add the listeners to update the notifier
     _outerAnimation.addListener(() {
       outerRotationNotifier.value = _outerAnimation.value;
     });
@@ -88,14 +88,14 @@ class _VoidSwordToolState extends State<VoidSwordTool>
       ..forward();
   }
 
-  /// Genera l'SVG sostituendo i segnaposto con i valori correnti.
+  ///generates the svg by replacing the placeholders with current values.
   String _generateSvg(double outer, double inner) {
     return voidSwordSvgTemplate
         .replaceAll('{outerRotation}', outer.toString())
         .replaceAll('{innerRotation}', inner.toString());
   }
 
-  /// Costruisce un pulsante per selezionare un asset e avviare l'animazione.
+  ///builds a button to select an asset and start animation.
   Widget _buildAssetButton(String assetPath, double outerTarget, double innerTarget) {
     return ElevatedButton(
       onPressed: () {
@@ -117,7 +117,7 @@ class _VoidSwordToolState extends State<VoidSwordTool>
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        // Usa ValueListenableBuilder per ricostruire lo SVG quando cambiano le rotazioni.
+        //USA VALUELISTABLEBUilder to reconstruct the SVG when rotations change.
         ValueListenableBuilder<double>(
           valueListenable: outerRotationNotifier,
           builder: (context, outerRotation, _) {
