@@ -36,68 +36,70 @@ class ToolsView extends StatelessWidget {
     // Placeholder image path
     const String placeholderImage = 'assets/images/universal/placeholder.webp';
 
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: Center(
-        child: Wrap(
-          spacing: 16,
-          runSpacing: 16,
-          alignment: WrapAlignment.center,
-          children: tools.map((mapData) {
-            logger.fine('Rendering map card: ${mapData['title']}');
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Center(
+          child: Wrap(
+            spacing: 16,
+            runSpacing: 16,
+            alignment: WrapAlignment.center,
+            children: tools.map((mapData) {
+              logger.fine('Rendering map card: ${mapData['title']}');
 
-            return GestureDetector(
-              onTap: () {
-                logger.info('Navigating to: ${mapData['route']}');
-                Navigator.pushNamed(context, mapData['route']!);
-              },
-              child: SizedBox(
-                width: 210,
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  elevation: 4,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      // Second title (map indicator) sopra l'immagine.
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8, left: 8, right: 8),
-                        child: Text(
-                          mapData['map'] ?? '',
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                                fontWeight: FontWeight.w600,
-                              ),
-                          textAlign: TextAlign.center,
+              return GestureDetector(
+                onTap: () {
+                  logger.info('Navigating to: ${mapData['route']}');
+                  Navigator.pushNamed(context, mapData['route']!);
+                },
+                child: SizedBox(
+                  width: 210,
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    elevation: 4,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        // Second Title (Map Indicator) above the image.
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8, left: 8, right: 8),
+                          child: Text(
+                            mapData['map'] ?? '',
+                            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                      ),
-                      ClipRRect(
-                        borderRadius: const BorderRadius.vertical(
-                          top: Radius.circular(15),
+                        ClipRRect(
+                          borderRadius: const BorderRadius.vertical(
+                            top: Radius.circular(15),
+                          ),
+                          child: Image.asset(
+                            mapData['image'] ?? placeholderImage,
+                            fit: BoxFit.contain,
+                            height: 150,
+                          ),
                         ),
-                        child: Image.asset(
-                          mapData['image'] ?? placeholderImage,
-                          fit: BoxFit.contain,
-                          height: 150,
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            mapData['title']!,
+                            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          mapData['title']!,
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            );
-          }).toList(),
+              );
+            }).toList(),
+          ),
         ),
       ),
     );
