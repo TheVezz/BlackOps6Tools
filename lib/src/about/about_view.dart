@@ -10,7 +10,7 @@ class AboutView extends StatelessWidget {
   const AboutView({super.key});
 
   // Link you have some sites
-  final String nexusModsUrl = "";
+  final String nexusModsUrl = "https://www.nexusmods.com/callofdutyblackops6/mods/7?tab=description";
   final String githubUrl = "https://github.com/TheVezz/BlackOps6Tools/tree/main";
   final String playStoreUrl = "";
 
