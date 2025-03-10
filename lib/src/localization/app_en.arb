@@ -11,7 +11,7 @@
   "@aboutNexusMods": {
     "description": "The title for download link on nexusmods in about page"
   },
-  "aboutDescription3": "Author Thevezz but some of the assets used are by Wesley from hub.tcno.co",
+  "aboutDescription3": "Author: Thevezz, with some assets provided by Wesley from hub.tcno.co",
   "@aboutDescription3": {
     "description": "The third description on the Information page"
   },

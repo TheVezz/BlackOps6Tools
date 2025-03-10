@@ -20,8 +20,14 @@ class SettingsService {
   /// Persists the user's preferred ThemeMode to local storage.
   Future<void> updateThemeMode(ThemeMode theme) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt(_themeModeKey, theme.index);
-    logger.info('Updated user\'s ThemeMode to: $theme');
+    
+    // Prova a salvare il valore e verifica il risultato
+    bool success = await prefs.setInt(_themeModeKey, theme.index);
+    if (success) {
+      logger.info("✅ ThemeMode salvato con successo: $theme");
+    } else {
+      logger.severe("❌ ERRORE: ThemeMode NON salvato!");
+    }
   }
 
   /// Loads the User's preferred Locale from local storage.
@@ -35,7 +41,13 @@ class SettingsService {
   /// Persists the user's preferred Locale to local storage.
   Future<void> updateLocale(String locale) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_localeKey, locale);
-    logger.info('Updated user\'s Locale to: $locale');
+    
+    // Prova a salvare il valore e verifica il risultato
+    bool success = await prefs.setString(_localeKey, locale);
+    if (success) {
+      logger.info("✅ Locale salvato con successo: $locale");
+    } else {
+      logger.severe("❌ ERRORE: Locale NON salvato!");
+    }
   }
 }

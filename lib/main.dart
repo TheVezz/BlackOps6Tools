@@ -6,6 +6,7 @@ import 'src/settings/settings_service.dart';
 import 'src/core/logger.dart'; // Import logger for debugging
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   // Initialize the logger
   initLogger(); // Ensure the logger is initialized
   logger.info('Application is starting...');

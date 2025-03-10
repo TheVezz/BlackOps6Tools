@@ -4,8 +4,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../core/logger.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-/// Page information of the app.
-/// Contains links to Nexus Mods, Github, Play Store, and Ko-Fi support.
+// Page information of the app.
+// Contains links to Nexus Mods, Github, Play Store, and Ko-Fi support.
 class AboutView extends StatelessWidget {
   const AboutView({super.key});
 
@@ -15,10 +15,11 @@ class AboutView extends StatelessWidget {
   final String playStoreUrl = "";
   final String koFiUrl = "https://ko-fi.com/Z8Z11BPKE0";
 
-  /// Function to open a URL in the browser
+  // Function to open a URL in the browser
   Future<void> _launchUrl(String url) async {
-    if (await canLaunchUrl(Uri.parse(url))) {
-      await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+    final Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     } else {
       logger.warning('Impossible to open the link: $url');
     }
@@ -38,6 +39,7 @@ class AboutView extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 18),
           ),
           const SizedBox(height: 24),
+
           const Divider(),
           const SizedBox(height: 16),
           Text(
@@ -45,44 +47,33 @@ class AboutView extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           const SizedBox(height: 16),
-          
-          // Link to Nexus Mods
-          ListTile(
-            leading: SvgPicture.asset(
-              'assets/images/platform/nexusmods.svg',
-              width: 24,
-              height: 24,
-            ),
-            title: Text(AppLocalizations.of(context)!.aboutNexusMods),
-            subtitle: Text(nexusModsUrl, style: Theme.of(context).textTheme.bodySmall),
-            onTap: () => _launchUrl(nexusModsUrl),
-          ),
-          const Divider(),
-          
-          // Link to Play Store
-          ListTile(
-            leading: SvgPicture.asset(
-              'assets/images/platform/playstore.svg',
-              width: 24,
-              height: 24,
-            ),
-            title: Text(AppLocalizations.of(context)!.aboutPlayStore),
-            subtitle: Text(playStoreUrl, style: Theme.of(context).textTheme.bodySmall),
-            onTap: () => _launchUrl(playStoreUrl),
-          ),
-          const Divider(),
 
-          // Link to GitHub
-          ListTile(
-            leading: SvgPicture.asset(
-              'assets/images/platform/github.svg',
-              width: 24,
-              height: 24,
-            ),
-            title: Text(AppLocalizations.of(context)!.aboutGitHub),
-            subtitle: Text(githubUrl, style: Theme.of(context).textTheme.bodySmall),
-            onTap: () => _launchUrl(githubUrl),
+          Wrap(
+            spacing: 10,
+            runSpacing: 10,
+            children: [
+              _buildLinkTile(
+                context,
+                title: AppLocalizations.of(context)!.aboutNexusMods,
+                url: nexusModsUrl,
+                iconPath: 'assets/images/platform/nexusmods.svg',
+              ),
+              _buildLinkTile(
+                context,
+                title: AppLocalizations.of(context)!.aboutGitHub,
+                url: githubUrl,
+                iconPath: 'assets/images/platform/github.svg',
+              ),
+              if (playStoreUrl.isNotEmpty)
+                _buildLinkTile(
+                  context,
+                  title: AppLocalizations.of(context)!.aboutPlayStore,
+                  url: playStoreUrl,
+                  iconPath: 'assets/images/platform/playstore.svg',
+                ),
+            ],
           ),
+
           const Divider(),
           const SizedBox(height: 16),
           Text(
@@ -90,21 +81,41 @@ class AboutView extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           const SizedBox(height: 24),
-          
+
           // Ko-Fi Support Section
-          Text(
-            "Support Me on Ko-Fi",
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
-          const SizedBox(height: 12),
-          InkWell(
-            onTap: () => _launchUrl(koFiUrl),
-            child: Image.asset(
-              'assets/images/kofi.webp', // Scarica e salva l'immagine in assets
-              height: 36,
+          Align(
+            alignment: Alignment.center,
+            child: InkWell(
+              onTap: () => _launchUrl(koFiUrl),
+              child: Image.asset(
+                'assets/images/kofi.webp',
+                height: 50,
+              ),
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  // Method for building a tile with links
+  Widget _buildLinkTile(BuildContext context, {
+    required String title,
+    required String url,
+    required String iconPath,
+  }) {
+    return Card(
+      elevation: 2,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ListTile(
+        leading: SvgPicture.asset(
+          iconPath,
+          width: 24,
+          height: 24,
+        ),
+        title: Text(title),
+        subtitle: Text(url, style: Theme.of(context).textTheme.bodySmall),
+        onTap: () => _launchUrl(url),
       ),
     );
   }
